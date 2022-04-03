@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js">    </script>
+</head>
+<body>
+    <div class="menu_top">
+        <ul class="menu_main">
+            <li>
+                <div>A</div>
+                <ul class="menu_sub">
+                    <li>
+                        <div><a href="#">Apple</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Air</a></div>
+                    </li>
+                    <li>
+                    <div><a href="#">Ace</a></div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div>B</div>
+                <ul class="menu_sub">
+                    <li>
+                        <div><a href="#">Bear</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Brown</a></div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div>C</div>
+                <ul class="menu_sub">
+                    <li id="triangle"><div></div></li>
+                    <li>
+                        <div><a href="#">Computer</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Circle</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Cat</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Coffee</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Calculator</a></div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+<script>
+        $(document).ready(function () {
+            $(document).on('mouseenter', '.menu_main > li > div', function () {
+                $(this).next($('.menu_sub')).slideDown(200);
+            });
+            
+            $(document).on('mouseleave', '.menu_main > li', function () {
+                $('.menu_sub').slideUp(200);
+            });
+        });
+</script>
+</body>
+</html>
