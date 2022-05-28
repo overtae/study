@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<body>
+    <span>Total Clicks: 0</span>
+    <button id="btn">Click Me!</button>
+</body>
+<script>
+    let counter = 0;
+    // const button = document.querySelector("button")
+    // 어떤 버튼을 선택해야 되는지 모른다. >> id 로 접근
+    const button = document.getElementById("btn");
+    const span = document.querySelector("span");
+    function handleClick() {
+        counter += 1;
+        span.innerText = `Total Clicks: ${counter}`;
+    }
+    button.addEventListener("click", handleClick);
+    // button 의 click 이벤트 감지
+</script>
+</html>
